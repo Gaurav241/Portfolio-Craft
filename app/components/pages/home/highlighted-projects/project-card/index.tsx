@@ -12,18 +12,18 @@ type ProjectCardProps = {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className='flex gap-6 lg:gap-12 flex-col lg:flex-row'>
-      <div className='w-full h-full'>
-        <Link href={`/projects/${project.slug}`}>
+      <div className='w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full'>
+        <Link href={`/projects/${project.slug}`} >
           <Image
             src={project.thumbnail.url}
             alt={`Project Thumbnail ${project.title}`}
             width={420}
             height={304}
-            className='w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg'
+            className='w-full h-full object-cover rounded-lg'
           />
         </Link>
       </div>
-      <div>
+      <div className='flex-1 lg:py-[18px]'>
         <h3 className='flex items-center gap-3 font-medium text-lg text-gray-50'>
           <Link href={`/projects/${project.slug}`}>
             <Image
