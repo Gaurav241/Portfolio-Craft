@@ -1,15 +1,20 @@
+import Image from 'next/image'
 import { Link } from '@/app/components/link'
 import { TechBadge } from '@/app/components/tech-badge'
-import Image from 'next/image'
+import { Project } from '@/app/types/projects'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 
-export const ProjectCard = () => {
+type ProjectCardProps = {
+  project: Project
+}
+
+export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className='flex gap-6 lg:gap-12 flex-col lg:flex-row'>
       <div className='w-full h-full'>
         <Image
-          src=''
-          alt='Project Thumbnail'
+          src={project.thumbnail.url}
+          alt={`Project Thumbnail ${project.title}`}
           width={420}
           height={304}
           className='w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg'
@@ -23,18 +28,18 @@ export const ProjectCard = () => {
             width={20}
             height={20}
           />
-          Project title
+          {project.title}
         </h3>
-        <p className='text-gray-400 my-6'>
-          The company itself is a very successful company. Similarly
-          the pleasure of laborious pleasure from the expedient truth of the free pleasure
-          resilience Therefore, I will explain that we do not gain any hatred for our suffering
-          will be followed. Or consider them as necessary! Nothing really
-        </p>
+        <p className='text-gray-400 my-6'>{project.shortDescription}</p>
         <div className='flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]'>
-          <TechBadge name='Node.js' />
+          {project.technologies.map((tech) => (
+            <TechBadge
+              key={`${project.title}-tech-${tech.name}`}
+              name={tech.name}
+            />
+          ))}
         </div>
-        <Link href='/projects/book-wise'>
+        <Link href={`/projects/${project.slug}`}>
           View Project
           <HiArrowNarrowRight />
         </Link>
