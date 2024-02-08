@@ -3,6 +3,7 @@ import './globals.css'
 import { ReactNode } from 'react'
 import { Header } from './components/header'
 import { ContactForm } from './components/contact-form'
+import { BackToTop } from './components/back-to-top'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-US" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
+        <BackToTop />
         <Header />
         {children}
         <ContactForm />
