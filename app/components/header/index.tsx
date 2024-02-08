@@ -1,6 +1,6 @@
 'use client'
 
-// import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { NavItem } from './nav-item'
 
@@ -20,8 +20,7 @@ export const Header = () => {
     <header className='absolute top-0 w-full z-10 h-24 flex items-center justify-center'>
       <div className='container flex items-center justify-between'>
         <Link href='/'>
-          {/* <Image width={58} height={49} src='' alt='Logo Gaurav Govinda' /> */}
-          Logo Image
+          <Image width={100} height={100} src='/images/KGG.png' alt='Logo Gaurav Govinda' />
         </Link>
         <nav className='flex items-center gap-4 sm:gap-10'>
           {NAV_ITEMS.map((item) => (
