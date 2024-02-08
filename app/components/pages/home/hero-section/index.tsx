@@ -1,27 +1,18 @@
 'use client'
 
+import Image from 'next/image'
 import { Button } from '@/app/components/button'
 import { TechBadge } from '@/app/components/tech-badge'
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb'
-import Image from 'next/image'
+import { HomePageInfo } from '@/app/types/page-info'
+import { RichText } from '@/app/components/rich-text'
+import { CMSIcon } from '@/app/components/cms-icon'
 
-const CONTACTS = [
-  {
-    url: 'https://github.com/Gaurav241',
-    icon: <TbBrandGithub />
-  },
-  {
-    url: 'https://linkedin.com/in/krgauravgovinda',
-    icon: <TbBrandLinkedin />
-  },
-  {
-    url: 'https://whatsapp.com',
-    icon: <TbBrandWhatsapp />
-  }
-]
+type HeroSectionProps = {
+  homeInfo: HomePageInfo
+}
 
-export const HeroSection = () => {
+export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
   const handleContact = () => {
     const contactSection = document.querySelector('#contact')
     if (contactSection) {
@@ -35,18 +26,12 @@ export const HeroSection = () => {
         <div className='w-full lg:max-w-[530px]'>
           <p className='font-mono text-emerald-400'>Hello, my name is</p>
           <h2 className='text-4xl font-medium mt-2'>Kumar Gaurav Govinda</h2>
-          <p className='text-gray-400 my-6 text-sm sm:text-base'>
-            Hello, I'm Kumar Gaurav Govinda, a passionate Full-Stack Developer with 2+ years of
-            experience in crafting beautiful, functional user interfaces. My tech journey is fueled
-            by a desire to innovate and create intuitive solutions that simplify complex challenges.
-            I excel in leading technical teams through the exciting hurdles of our dynamic industry,
-            aiming to inspire with vision and drive excellence. Eager to tackle new challenges, I'm
-            on a quest to transform ideas into digital realities. Let's connect and explore the
-            potential of creative collaboration!
-          </p>
+          <div className='text-gray-400 my-6 text-sm sm:text-base'>
+            <RichText content={homeInfo.introduction.raw} />
+          </div>
           <div className='flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]'>
-            {Array.from({ length: 7 }).map((_, index) => (
-              <TechBadge name='Next.js' />
+            {homeInfo.technologies.map((tech) => (
+              <TechBadge key={tech.name} name={tech.name} />
             ))}
           </div>
           <div className='mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row'>
@@ -55,14 +40,14 @@ export const HeroSection = () => {
               <HiArrowNarrowRight size={18} />
             </Button>
             <div className='text-gray-600 text-2xl flex items-center h-20 gap-3'>
-              {CONTACTS.map((contact, index) => (
+              {homeInfo.socials.map((contact, index) => (
                 <a
                   key={`contact-${index}`}
                   href={contact.url}
                   target='_blank'
                   className='hover:text-gray-100 transition-all'
                 >
-                  {contact.icon}
+                  <CMSIcon icon={contact.iconSvg} />
                 </a>
               ))}
             </div>
@@ -71,7 +56,7 @@ export const HeroSection = () => {
         <Image
           width={420}
           height={404}
-          src=''
+          src={homeInfo.profilePicture.url}
           alt='Gaurav Govinda Profile Photo'
           className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
         />
