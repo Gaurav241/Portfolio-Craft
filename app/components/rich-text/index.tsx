@@ -9,17 +9,21 @@ export const RichText = ({ ...props }: RichTextProps) => {
       {...props}
       renderers={{
         bold: ({ children }) => (
-          <b className='text-gray-50 font-medium'>{children}</b>
+          <b className="text-gray-50 font-medium">{children}</b>
         ),
-        a: ({ children }) => (
+        ul: ({ children }) => (
+          <ul className="list-disc list-inside pl-2 flex flex-col gap-1">
+            {children}
+          </ul>
+        ),
+        a: ({ children, ...props }) => (
           <a
-            className='text-emerald-500 hover:text-emerald-600/90 transition-all cursor-pointer'
-            href='https://betrybe.com'
-            target='_blank'
+            {...props}
+            className="hover:text-emerald-500 transition-colors underline font-semibold"
           >
             {children}
           </a>
-        )
+        ),
       }}
     />
   )
