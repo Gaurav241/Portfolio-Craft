@@ -6,8 +6,10 @@ import { SectionsTitle } from '../sections-title'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import axios from 'axios'
 import { toast } from 'react-hot-toast'
+import { motion } from 'framer-motion'
+import axios from 'axios'
+import { fadeUpAnimation } from '@/app/lib/animations'
 
 export const ContactForm = () => {
   const contactFormSchema = z.object({
@@ -46,11 +48,12 @@ export const ContactForm = () => {
         <SectionsTitle
           subtitle='contact'
           title='Lets work together? Contact'
-        className='items-center text-center'
-         />
-        <form
+          className='items-center text-center'
+        />
+        <motion.form
           className='mt-12 w-full flex flex-col gap-4'
           onSubmit={handleSubmit(onSubmit)}
+          {...fadeUpAnimation}
         >
           <input
             autoComplete='off'
@@ -80,7 +83,7 @@ export const ContactForm = () => {
             Send Message
             <HiArrowNarrowRight size={18} />
           </Button>
-        </form>
+        </motion.form>
       </div>
     </section>
   )
