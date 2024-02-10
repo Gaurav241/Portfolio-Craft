@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react';
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
 import { Header } from './components/header'
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         {children}
         <ContactForm />
+        <Analytics />
       </body>
     </html>
   )
