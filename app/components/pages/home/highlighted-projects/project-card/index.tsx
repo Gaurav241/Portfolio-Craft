@@ -68,7 +68,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               key={`${project.title}-tech-${tech.name}`}
               name={tech.name}
               {...techBadgeAnimation}
-              transition={{ duration: 0.2, delay: 0.5 + i * 0.2 }}
+              transition={{ duration: 0.2, delay: 0.2 + i * 0.2 }}
             />
           ))}
         </div>
