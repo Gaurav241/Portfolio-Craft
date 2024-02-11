@@ -40,8 +40,8 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
           <div className='flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]'>
             {homeInfo.technologies.map((tech, i) => (
               <TechBadge
-                key={tech.name}
-                name={`intro-tech-${tech.name}`}
+                key={`intro-tech-${tech.name}`}
+                name={tech.name}
                 {...techBadgeAnimation}
                 transition={{ duration: 0.2, delay: i * 0.2 }}
               />
