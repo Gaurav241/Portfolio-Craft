@@ -16,7 +16,7 @@ export const metadata = {
     { name: 'Kumar Gaurav Govinda', url: 'https://www.linkedin.com/in/krgauravgovinda/' },
   ],
   creator: 'Kumar Gaurav Govinda',
-  icons: '/favicon.ico',
+  // icons: { icon: '' },
   openGraph: {
     title: 'KGG Dev',
     description:
