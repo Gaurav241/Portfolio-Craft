@@ -2,13 +2,11 @@
 
 import Image from 'next/image'
 import { Button } from '@/app/components/button'
-import { TechBadge } from '@/app/components/tech-badge'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { HomePageInfo } from '@/app/types/page-info'
 import { RichText } from '@/app/components/rich-text'
 import { CMSIcon } from '@/app/components/cms-icon'
 import { motion } from 'framer-motion'
-import { techBadgeAnimation } from '@/app/lib/animations'
 
 type HeroSectionProps = {
   homeInfo: HomePageInfo
@@ -36,16 +34,6 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
           <h2 className='text-4xl font-medium mt-2'>Kumar Gaurav Govinda</h2>
           <div className='text-gray-400 my-6 text-sm sm:text-base'>
             <RichText content={homeInfo.introduction.raw} />
-          </div>
-          <div className='flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]'>
-            {homeInfo.technologies.map((tech, i) => (
-              <TechBadge
-                key={`intro-tech-${tech.name}`}
-                name={tech.name}
-                {...techBadgeAnimation}
-                transition={{ duration: 0.2, delay: i * 0.2 }}
-              />
-            ))}
           </div>
           <div className='mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row'>
             <Button onClick={handleContact} className='w-max shadow-button'>

@@ -12,9 +12,6 @@ const getPageData = async (): Promise<HomePageData> => {
         introduction {
           raw
         }
-        technologies {
-          name
-        }
         profilePicture {
           url
         }

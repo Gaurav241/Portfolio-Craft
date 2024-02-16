@@ -11,7 +11,6 @@ export type HomePageInfo = {
   introduction: {
     raw: RichTextContent
   }
-  technologies: KnownTech[]
   profilePicture: {
     url: string
   }
