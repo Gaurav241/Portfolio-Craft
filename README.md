@@ -105,7 +105,7 @@ WEBHOOK_URL="your-discord-webhook-url"
 ```
 4. **Hygraph Project and Discord Webhook Setup**
 
-- For your portfolio to properly fetch content, you need to clone the schema and content model from the provided Hygraph project clone. Follow the instructions on Hygraph to import the schema into your project. This ensures your portfolio can communicate with Hygraph to retrieve your dynamic content.
+- For your portfolio to properly fetch content, you need to clone the schema and content model from the provided Hygraph project clone. Follow the instructions on [Clone my Hygraph Project](https://app.hygraph.com/clone/dc8fc00574e94c3b83b6c44845d4babe?name=Portfolio-craft-tutorial) to import the schema into your project. This ensures your portfolio can communicate with Hygraph to retrieve your dynamic content.
 
 - To set up the Discord webhook for contact notifications, go to your Discord server settings, select 'Integrations', click on 'New Webhook', and choose the channel you want the notifications to go to. Once created, copy the webhook URL and paste it into your `.env` file under `WEBHOOK_URL`.
 
