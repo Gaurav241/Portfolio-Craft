@@ -15,8 +15,7 @@ export const WorksExperience = ({ experiences }: WorksExperienceProps) => {
           title='Professional Experiences'
         />
         <p className='text-gray-400 mt-6'>
-          Unfortunately I don't have any professional experience yet. But...
-          How about you change that and help me with this part? :D
+        Always open to teaming up and growing together, because let's face it, I can't reach the top shelf on my own.
         </p>
       </div>
       <div className='flex flex-col gap-4'>
