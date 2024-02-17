@@ -8,6 +8,22 @@ Welcome to the GitHub repository of Portfolio Craft, a dynamic and responsive pe
 
 Experience the live version of Portfolio Craft at [https://gauravgovinda.vercel.app/](https://gauravgovinda.vercel.app/).
 
+## Screenshots
+
+### UI/UX
+#### Home
+![Home](visuals/ss/Home.png)
+#### Skills
+![Skills](visuals/ss/Skills.png)
+#### Featured Projects
+![Featured Projects](visuals/ss/Featured_Projects.png)
+#### Experiences
+![Experiences](visuals/ss/Experiences.png)
+#### Contact
+![Contact](visuals/ss/Contact.png)
+#### My Projects
+![My Projects](visuals/ss/My_Projects.png)
+
 ## Features
 
 Portfolio Craft comes packed with a variety of features designed to make your online portfolio stand out:
