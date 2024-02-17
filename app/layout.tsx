@@ -10,8 +10,8 @@ import './globals.css'
 
 export const metadata = {
   title: {
-    default: 'KGG Dev',
-    template: '%s | KGG Dev',
+    default: 'KGG',
+    template: '%s | KGG',
   },
   authors: [
     { name: 'Kumar Gaurav Govinda', url: 'https://www.linkedin.com/in/krgauravgovinda/' },
@@ -19,14 +19,14 @@ export const metadata = {
   creator: 'Kumar Gaurav Govinda',
   // icons: { icon: '' },
   openGraph: {
-    title: 'KGG Dev',
+    title: 'KGG',
     description:
       'Kumar Gaurav Govinda DEV, website and web application development.',
     type: 'website',
     locale: 'en_US',
     url: 'xyz.com',
   },
-  applicationName: 'KGG Dev',
+  applicationName: 'KGG',
   description:
     'Kumar Gaurav Govinda DEV, website and web application development.',
   category: 'Web Development',
@@ -34,7 +34,7 @@ export const metadata = {
     'Web Development, Website Development, Application Development, Web Application Development, Website Development, Website Development in Ranchi, Application Development in Ranchi, Web Application Development in Ranchi, Website Development in Ranchi, Website Development in India, Application Development in India, Web Application Development in India, Web Site Development in India, Website Development in Ranchi India, Application Development in Ranchi India, Web Application Development in Ranchi India, Website Development in Ranchi India, Website Development in India, Application Development in India, Web Application Development in India, Website Development in India, Website Development in Ranchi India, Application Development in Ranchi India, Web Application Development in Ranchi India, Web Site Development in Ranchi India',
   classification: 'Web Development',
   robots: 'index, follow',
-  publisher: 'KGG Dev',
+  publisher: 'KGG',
   referrer: 'no-referrer-when-downgrade',
   alternates: {
     canonical: 'xyz.com',

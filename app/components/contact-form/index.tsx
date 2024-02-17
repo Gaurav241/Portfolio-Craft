@@ -47,7 +47,7 @@ export const ContactForm = () => {
       <div className='w-full max-w-[420px] mx-auto'>
         <SectionsTitle
           subtitle='contact'
-          title='Lets work together? Contact'
+          title="Project in mind? Let's talk."
           className='items-center text-center'
         />
         <motion.form
