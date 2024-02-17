@@ -1,5 +1,20 @@
 # Portfolio Craft
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Deployed Website](#deployed-website)
+- [Screenshots](#screenshots)
+  - [UI/UX](#uiux)
+  - [Hygraph-Schema](#hygraph-schema)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Steps](#steps)
+- [Contributions](#contributions)
+- [License](#license)
+
 ## Introduction
 
 Welcome to the GitHub repository of Portfolio Craft, a dynamic and responsive personal portfolio website designed to showcase skills, projects, and experiences in a professional and engaging manner. This portfolio website is perfect for developers, designers, and professionals looking to establish a strong online presence.
