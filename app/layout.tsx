@@ -24,7 +24,7 @@ export const metadata = {
       'Kumar Gaurav Govinda DEV, website and web application development.',
     type: 'website',
     locale: 'en_US',
-    url: 'xyz.com',
+    url: 'https://gauravgovinda.vercel.app',
   },
   applicationName: 'KGG',
   description:
@@ -37,9 +37,9 @@ export const metadata = {
   publisher: 'KGG',
   referrer: 'no-referrer-when-downgrade',
   alternates: {
-    canonical: 'xyz.com',
+    canonical: 'https://gauravgovinda.vercel.app',
     languages: {
-      'en-US': 'xyz.com',
+      'en-US': 'https://gauravgovinda.vercel.app',
     },
   },
 }
