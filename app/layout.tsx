@@ -4,6 +4,7 @@ import { ReactNode } from 'react'
 import { BackToTop } from './components/back-to-top'
 import { ContactForm } from './components/contact-form'
 import { Header } from './components/header'
+import { Footer } from './components/footer'
 import { Toaster } from './components/toaster'
 import './globals.css'
 
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         <ContactForm />
         <Analytics />
+        <Footer />
       </body>
     </html>
   )
