@@ -24,6 +24,12 @@ Experience the live version of Portfolio Craft at [https://gauravgovinda.vercel.
 #### My Projects
 ![My Projects](visuals/ss/My_Projects.png)
 
+### Hygraph-Schema
+#### Page Schema
+![Page](visuals/schema/Page.png)
+#### Project Schema
+![Project](visuals/schema/Project.png)
+
 ## Features
 
 Portfolio Craft comes packed with a variety of features designed to make your online portfolio stand out:
