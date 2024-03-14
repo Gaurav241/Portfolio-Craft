@@ -5,7 +5,7 @@ import { WorkExperience } from '@/app/types/work-experience'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 import { motion } from 'framer-motion'
-import enUS from 'date-fns/locale/en-US'
+import { enUS as defaultLocale } from 'date-fns/locale/en-US';
 import Image from 'next/image'
 import { fadeUpAnimation, techBadgeAnimation } from '@/app/lib/animations'
 
@@ -25,9 +25,9 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
   } = experience
 
   const startDate = new Date(experience.startDate)
-  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: enUS })
+  const formattedStartDate = format(startDate, 'MMM yyyy', { locale: defaultLocale })
   const formattedEndDate = endDate
-    ? format(new Date(endDate), 'MMM yyyy', { locale: enUS })
+    ? format(new Date(endDate), 'MMM yyyy', { locale: defaultLocale })
     : 'Present'
 
   const end = endDate ? new Date(endDate) : new Date()
