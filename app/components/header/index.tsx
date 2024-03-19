@@ -15,8 +15,16 @@ const NAV_ITEMS = [
     href: '/projects'
   },
   {
+    label: 'Skill',
+    href: '#skills'
+  },
+  {
     label: 'Experience',
     href: '#experiences'
+  },
+  {
+    label: 'Contact',
+    href: '#contact'
   }
 ]
 
