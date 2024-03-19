@@ -73,7 +73,7 @@ To set up your instance of Portfolio Craft, follow these steps:
 ### Prerequisites
 
 - Node.js (preferably the latest stable version)
-- Yarn package manager (you can use npm, but this guide assumes you're using Yarn)
+- npm package manager (you can use yarn, but this guide assumes you're using npm)
 
 ### Steps
 
@@ -84,7 +84,7 @@ cd portfolio-craft
 ```
 2. **Install dependencies**
 ```
-yarn install
+npm install
 ```
 3. **Set up environment variables**
 
@@ -111,7 +111,7 @@ WEBHOOK_URL="your-discord-webhook-url"
 
 5. **Run the development server**
 ```
-yarn dev
+npm run dev
 ```
 This command runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will automatically reload if you make edits.
 
@@ -119,8 +119,8 @@ This command runs the app in development mode. Open [http://localhost:3000](http
 
 When you're ready to deploy your portfolio:
 ```
-yarn build
-yarn start
+npm run build
+npm run start
 ```
 ## Contributions
 
