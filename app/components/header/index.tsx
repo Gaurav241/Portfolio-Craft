@@ -16,15 +16,15 @@ const NAV_ITEMS = [
   },
   {
     label: 'Skill',
-    href: '#skills'
+    href: '/#skills'
   },
   {
     label: 'Experience',
-    href: '#experiences'
+    href: '/#experiences'
   },
   {
     label: 'Contact',
-    href: '#contact'
+    href: '/#contact'
   }
 ]
 
