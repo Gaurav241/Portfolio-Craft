@@ -11,6 +11,10 @@ const NAV_ITEMS = [
     href: '/'
   },
   {
+    label: 'Blog',
+    href: 'https://gauravblog.vercel.app'
+  },
+  {
     label: 'Projects',
     href: '/projects'
   },
