@@ -16,7 +16,7 @@ export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
       <SectionsTitle subtitle='highlights' title='Featured Projects' />
       <HorizontalDivider className='mb-16' />
       <div>
-        {projects?.map((project) => (
+        {projects?.slice(0, 2).map((project) => (
           <div key={project.slug}>
             <ProjectCard project={project} />
             <HorizontalDivider className='my-16' />
