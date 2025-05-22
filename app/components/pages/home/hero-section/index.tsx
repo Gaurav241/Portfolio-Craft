@@ -62,11 +62,11 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
           className='origin-center'
         >
           <Image
-            width={420}
-            height={404}
+            width={480}
+            height={480}
             src={homeInfo.profilePicture.url}
             alt='Gaurav Govinda Profile Photo'
-            className='w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover'
+            className='w-[360px] h-[360px] lg:w-[480px] lg:h-[480px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-contain'
           />
         </motion.div>
       </div>
