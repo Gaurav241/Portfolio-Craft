@@ -5,9 +5,10 @@ import { usePathname } from 'next/navigation'
 type NavItemProps = {
   label: string
   href: string
+  onClick?: () => void
 }
 
-export const NavItem = ({ label, href }: NavItemProps) => {
+export const NavItem = ({ label, href, onClick }: NavItemProps) => {
   const pathname = usePathname()
 
   const isActive = pathname === href
@@ -15,6 +16,7 @@ export const NavItem = ({ label, href }: NavItemProps) => {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={
         cn('text-gray-400 flex items-center gap-2 font-medium font-mono', isActive && 'text-gray-50')
       }

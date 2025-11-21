@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 import { NavItem } from './nav-item'
 import { motion } from 'framer-motion'
 
@@ -33,6 +34,8 @@ const NAV_ITEMS = [
 ]
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <motion.header
       initial={{ top: -100 }}
@@ -49,11 +52,44 @@ export const Header = () => {
             alt='Logo Gaurav Govinda'
           />
         </Link>
-        <nav className='flex items-center gap-4 sm:gap-10'>
+
+        {/* Hamburger Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className='md:hidden text-gray-400 hover:text-gray-50 focus:outline-none'
+          aria-label='Toggle menu'
+        >
+          <div className='w-6 h-6 flex flex-col justify-center items-center'>
+            <span className={`block w-5 h-0.5 bg-current transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
+            <span className={`block w-5 h-0.5 bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block w-5 h-0.5 bg-current transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'}`}></span>
+          </div>
+        </button>
+
+        {/* Desktop Navigation */}
+        <nav className='hidden md:flex items-center gap-4 lg:gap-10'>
           {NAV_ITEMS.map((item) => (
             <NavItem key={item.label} {...item} />
           ))}
         </nav>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className='absolute top-24 left-0 w-full bg-gray-900 bg-opacity-95 md:hidden'
+          >
+            <div className='container py-4'>
+              <div className='flex flex-col gap-4'>
+                {NAV_ITEMS.map((item) => (
+                  <NavItem key={item.label} {...item} onClick={() => setIsOpen(false)} />
+                ))}
+              </div>
+            </div>
+          </motion.nav>
+        )}
       </div>
     </motion.header>
   )
