@@ -41,7 +41,7 @@ export const Header = () => {
       initial={{ top: -100 }}
       animate={{ top: 0 }}
       transition={{ duration: 0.5 }}
-      className='absolute top-0 w-full z-10 h-24 flex items-center justify-center'
+      className='fixed top-0 w-full z-10 h-24 flex items-center justify-center bg-gray-900 bg-opacity-95 backdrop-blur-sm'
     >
       <div className='container flex items-center justify-between'>
         <Link href='/'>
